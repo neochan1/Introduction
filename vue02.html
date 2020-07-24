@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="button" value="卢本伟牛逼" v-on:click="alert">
+        <h2 @click="doIt">{{ message }}</h2>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            // el: '.app',
+            data: {
+               message:"卢本伟牛逼"
+            },
+            methods: {
+                doIt:function(){
+                    this.message += "卢本伟牛逼"
+                },
+                alert:function(){
+                    alert("卢本伟牛逼")
+                }
+
+            }
+        })
+    </script>
+</body>
+</html>
